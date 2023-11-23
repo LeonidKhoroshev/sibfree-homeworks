@@ -80,7 +80,6 @@
 
 3. Выполните проверку доступности шлюза по умолчанию командой ping:
 ![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/2/screenshots/cyber2.png)
-
 Передача пакетов прошла в полном объеме, шлюз доступен (что логично, так как роутер в сети и обеспечивает доступ в интернет для всех домашних устройств).
 
 6. Запустите программу nmap (zenmap) и выполните команду `nmap -sV ‘ip  address default gate’ -p-`. Здесь `‘ip  address default gate’` — `ping 192.168.0.1` из примера выше.
