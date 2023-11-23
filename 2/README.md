@@ -63,8 +63,9 @@
 ![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/2/screenshots/cyber1.png)
 4. Выполните проверку доступности шлюза по умолчанию командой ping:
 `ping ‘ip address default gate’` (например, `ping 192.168.0.1`).
-5. Запустите программу nmap (zenmap) и выполните команду `nmap -sV ‘ip  address default gate’ -p-`. Здесь `‘ip  address default gate’` — `ping 192.168.0.1` из примера выше.
-6. Дайте ответ на следующие вопросы:
+![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/2/screenshots/cyber2.png)
+6. Запустите программу nmap (zenmap) и выполните команду `nmap -sV ‘ip  address default gate’ -p-`. Здесь `‘ip  address default gate’` — `ping 192.168.0.1` из примера выше.
+7. Дайте ответ на следующие вопросы:
 - Кто производитель оборудования?
 - Какая операционная система установлена на устройстве?
 - Сколько портов открыто на устройстве?
