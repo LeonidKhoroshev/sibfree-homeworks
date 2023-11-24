@@ -109,3 +109,35 @@
 - Какая подозрительная информация вам встречалась
 8. Сделайте выводы.
 
+Поскольку Wireshark установлен на Kali по-умолчанию, включаем wireshark:
+```
+sudo su
+wireshark
+```
+Далее в Gui анализируем наш трафик 
+![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/2/screenshots/cyber5.png)
+видим некоторое количество протоколов UDP, предположем, это может быть связано с запущенным на хостовой ОС видео с сервиса Youtube.
+
+Анализируем один из пакетов:
+![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/2/screenshots/cyber6.png)
+
+Видим 2 ip адреса - `192.168.251.221` - наш хост
+```
+ipconfig
+```
+![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/2/screenshots/cyber7.png)
+
+Второй адрес - `239.255.255.250` ищем в открытых источниках. Это простой адрес протокола обнаружения Simple Service Discovery Protocol (SSDP), то есть сетевой протокол, основанный на наборе интернет-протоколов для рекламы и обнаружения сетевых служб и информации о присутствии.
+
+Не очень информативно, идем дальше:
+![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/2/screenshots/cyber8.png)
+
+Перехвачен tcp пакет с адреса - `192.168.251.72` (Kali) на `34.120.158.37` (один из адресов Google)
+
+Далее смотрим как устанавливаются "трехсторонние рукопожатия", проверяются сертификаты сайтов и принимаются пакеты с адресов, принадлежащих Яндексу и Вконтакте.
+
+![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/2/screenshots/cyber8.png)
+
+
+
+
