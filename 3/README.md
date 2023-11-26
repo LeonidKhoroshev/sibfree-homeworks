@@ -21,10 +21,19 @@
 1. Для выполнения работы запустите образы операционных систем на базе ОС [Debian](https://www.kali.org/get-kali/#kali-virtual-machines) и [bWAPP](http://www.itsecgames.com/download.htm).
 
 Настроен и запущен "испытательный стенд" из 2 виртуальных машин Kali linux и Bee-Box.
+![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/3/screenshots/pentest1.png)
 
 2. Настройте сетевой доступ: Kali Linux — `192.168.0.1`, Bee-Box — `192.168.0.2`.
 
-Виртуальные машины взаимодействуют через адаптер виртуальной сети, работающий с 
+Виртуальные машины взаимодействуют через адаптер существующей виртуальной сети 192.168.56.0, который в свою очередь использует сервер DHCP, поэтому адреса машин могут быть изменены.
+![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/3/screenshots/pentest2.png)
+
+В нашем случае назначены следующие ip адреса:
+- Kali - '192.168.56.102'
+- Bee-Box - '192.168.56.103'
+
+Проверяем, что сеть работает и адреса доступны:
+![Alt text](https://github.com/LeonidKhoroshev/sibfree-homeworks/blob/main/3/screenshots/pentest3.png)
 
 4. Запустите Burp Suite. Включите проксирование.
 5. Получите доступ к сайту Bee-Box, открыв браузер в системе Kali Linux по адресу `192.168.0.2`. Логин и пароль для доступа: `bee/bug`. 
